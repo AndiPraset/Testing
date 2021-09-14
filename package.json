@@ -1,0 +1,22 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndiPraset/Testing.git"
+  },
+  "keywords": [
+    "restapi"
+  ],
+  "author": "AndiPw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndiPraset/Testing/issues"
+  },
+  "homepage": "https://github.com/AndiPraset/Testing#readme"
+}
