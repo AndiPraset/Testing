@@ -31,4 +31,22 @@ exports.tampilberdasarkanid=function(req,res){
                 response.ok(rows,res);
         }
     });
-}
+};
+
+
+//menambahkan data siswa
+exports.tambahsiswa = function(req,res){
+    var nama = req.body.nama;
+    var kelas = req.body.kelas;
+    var alamat = req.body.alamat;
+
+    connection.query('INSERT INTO siswa(nama,kelas,alamat) VALUES(?,?,?)',
+    [nama,kelas,alamat],
+        function (error,rows,fileds){
+            if (error){
+                console.log(error);
+            } else {
+                response.ok("Berhasil Menambahkan Data!", res)
+            }
+        });
+};
