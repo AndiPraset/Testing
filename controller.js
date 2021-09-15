@@ -12,9 +12,23 @@ exports.index = function(req,res){
 exports.tampilsemuasiswa = function(req,res){
     connection.query('SELECT * FROM siswa', function (error,rows,fileds){
         if(error){
-            connection.log(error);
+            consoles.log(error);
         } else {
             response.ok(rows,res)
         }
     });
 };
+
+
+//meanmpilkan semua data siswa berdasarkan id
+exports.tampilberdasarkanid=function(req,res){
+    let id = req.params.id;
+    connection.query('SELECT * FROM siswa WHERE id = ?', [id],
+        function(error,rows,fileds){
+            if (error){
+                console.log(error);
+            } else {
+                response.ok(rows,res);
+        }
+    });
+}
