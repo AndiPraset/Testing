@@ -50,3 +50,21 @@ exports.tambahsiswa = function(req,res){
             }
         });
 };
+
+
+//mengubah data berdasarkan id
+exports.ubahsiswa = function(req,res){
+    var id = req.body.id;
+    var nama = req.body.nama;
+    var kelas = req.body.kelas;
+    var alamat = req.body.alamat;
+
+    connection.query('UPDATE siswa Set nama=?, kelas=?, alamat=? WHERE id=?',[nama,kelas,alamat,id],
+    function (error,rows,fileds){
+        if (error){
+            console.log(error);
+        } else {
+            response.ok("Berhasil Ubah Data", res )
+        }
+    });
+};
