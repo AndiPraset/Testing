@@ -20,4 +20,7 @@ module.exports = function(app){
 
     app.route('/hapus')
         .delete(jsonku.hapussiswa);
+
+    app.route('/tampilmatapelajaran')
+        .get(jsonku.tampilgroupmatapelajaran);
 }
